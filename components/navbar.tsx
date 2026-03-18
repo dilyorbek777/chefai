@@ -13,7 +13,7 @@ const Navbar = () => {
 
 
     return (
-        <nav className="flex font-sans fixed backdrop-blur-2xl rounded-card max-md:p-4 z-50 top-3 right-0 left-0 max-w-[1720px] w-full mx-auto items-center justify-between px-24 py-5">
+        <nav className="flex font-sans max-[1100px]:px-12 fixed backdrop-blur-2xl rounded-card max-md:p-4 z-50 top-3 right-0 left-0 max-w-[1720px] w-full mx-auto items-center justify-between px-16 py-5">
             <Link href={'/'} className="flex items-center justify-center gap-2  text-primary ">
                 <p className="font-bold">
                     {siteDetails.siteName}
