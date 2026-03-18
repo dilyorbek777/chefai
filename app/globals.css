@@ -32,6 +32,7 @@
   --radius-card: 34px;
   --radius-button: 45px;
   --radius-img: 80px;
+  --radius-max: 1000px;
 }
 
 
@@ -44,11 +45,11 @@
 
 @layer base {
   h1 {
-    @apply font-medium text-[60px] max-md:text-[45px];
+    @apply font-medium text-[60px] max-md:text-[35px] font-syne;
   }
 
   h2 {
-    @apply font-medium text-[55px] max-md:text-[40px];
+    @apply font-medium text-[55px] max-md:text-[40px] font-syne;
   }
 
   button {
