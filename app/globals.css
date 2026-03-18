@@ -8,9 +8,32 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-workSans);
+  --font-syne: var(--font-syne);
+
+  --color-primary: #213D34;
+  --color-primary-400: #346254;
+  --color-primary-600: #1a2f2a;
+  --color-primary-700: #12201d;
+  --color-secondary: #D9EF78;
+  --color-secondary-400: #e8f5a3;
+  --color-secondary-600: #c7e35a;
+  --color-secondary-700: #b5d14a;
+
+  --color-extra: #F1F2ED;
+
+  --animate-random: random-move 15s ease-in-out infinite;
+  --animate-circle: circle-move 28s linear infinite;
+  --animate-vertical: top-bottom 24s ease-in-out infinite;
+
+  --delay-2000: 2000ms;
+  --delay-3000: 3000ms;
+
+  --radius-card: 34px;
+  --radius-button: 45px;
+  --radius-img: 80px;
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -19,8 +42,93 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  h1 {
+    @apply font-medium text-[60px] max-md:text-[45px];
+  }
+
+  h2 {
+    @apply font-medium text-[55px] max-md:text-[40px];
+  }
+
+  button {
+    @apply rounded-button py-2 px-7 cursor-pointer bg-secondary border border-secondary text-primary font-medium text-[19px] hover:bg-secondary-400 transition-all;
+  }
+
+  button.btn-primary {
+    @apply hover:bg-primary text-white bg-primary-400 transition-all border border-primary;
+  }
+
+  button.btn-trsp {
+    @apply bg-transparent text-primary border border-primary;
+  }
+
+  p {
+    @apply font-normal text-[25px] font-sans;
+  }
+}
+
+@layer utilities {
+
+  /* Random Floating Movement */
+  @keyframes random-move {
+
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+
+    25% {
+      transform: translate(40px, -60px);
+    }
+
+    50% {
+      transform: translate(-30px, 30px);
+    }
+
+    75% {
+      transform: translate(50px, 20px);
+    }
+  }
+
+  /* Circular Movement */
+  @keyframes circle-move {
+    from {
+      transform: rotate(0deg) translateX(40px) rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg) translateX(40px) rotate(-360deg);
+    }
+  }
+
+  /* Standard Vertical Movement */
+  @keyframes top-bottom {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-50px);
+    }
+  }
+
+  /* Custom Utility Classes */
+  .animate-random {
+    animation: random-move 8s ease-in-out infinite;
+  }
+
+  .animate-circle {
+    animation: circle-move 8s linear infinite;
+  }
+
+  .animate-vertical {
+    animation: top-bottom 4s ease-in-out infinite;
+  }
+}
+
+.animate-random, .animate-circle, .animate-vertical {
+  animation-fill-mode: backwards; /* Keeps the starting position before the delay ends */
 }
