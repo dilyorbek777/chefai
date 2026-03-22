@@ -133,3 +133,8 @@
 .animate-random, .animate-circle, .animate-vertical {
   animation-fill-mode: backwards; /* Keeps the starting position before the delay ends */
 }
+
+
+.clip-polygon-custom {
+    clip-path: polygon(25% 0%, 84% 27%, 78% 71%, 46% 100%, 16% 51%);
+  }

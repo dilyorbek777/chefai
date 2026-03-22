@@ -2,13 +2,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import Image from "next/image";
-
-const CARDS = [
-    { id: 1, title: "Personalize Your Profile", content: "Begin by creating your profile. Tell us about your dietary preferences, nutritional goals, and budget. Our AI technology tailors every meal plan to fit your unique needs.", img: "/img (3).png" },
-    { id: 2, title: "Set Your Goals", content: "Track your progress and adjust Set Your Goals your nutritional targets straight to your kitchen daily.Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, delectus. ", img: "/img (2).png" },
-    { id: 3, title: "Enjoy Your Meals", content: "Delicious recipes delivered straight to your kitchen. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, delectus. Lorem ipsum dolor sit amet.", img: "/img (1).png" },
-];
+import { CARDS } from "@/constants";
+import CustomImage from "./customImage";
 
 export default function CardCarousel() {
     const [items, setItems] = useState(CARDS);
@@ -42,14 +37,14 @@ export default function CardCarousel() {
 
     return (
         <div className="w-full bg-extra p-16 relative ">
-            <div className="overlay w-[600px] h-[203px] max-md:w-[300px] max-md:h-[101px] rounded-r-img bg-extra absolute -bottom-[100px] -z-10 left-0" />
+            <div className="overlay w-[600px] h-[203px] max-md:w-[300px] max-md:h-[101px] rounded-r-img bg-extra absolute -bottom-[50px] -z-10 left-0" />
 
-            <div className="flex items-center max-w-[1720px] mx-auto px-16 max-md:px-12  gap-7 text-center mt-10">
+            <div className="flex items-center max-w-[1720px] my-16 mx-auto px-16 max-md:px-12  gap-7 text-center mt-10 max-lg:flex-col">
                 <h1 className="text-syne">How it works</h1>
-                <span className="text-[50px]">{"/"}</span>
-                <p className="text-start">Step into the world of hassle-free meal <br /> planning with our easy 3-step process</p>
+                <span className="text-[50px] max-lg:hidden">{"/"}</span>
+                <p className="text-start max-lg:text-center">Step into the world of hassle-free meal <br /> planning with our easy 3-step process</p>
             </div>
-            <div className="flex flex-col md:flex-row items-center justify-between px-16  min-h-[700px] max-w-[1720px] mx-auto rounded-3xl overflow-hidden">
+            <div className="flex flex-col md:flex-row items-center justify-between px-16 max-md:p-1  min-h-[700px] max-w-[1720px] mx-auto rounded-3xl overflow-hidden">
                 {/* Left Content Section */}
                 <div className="w-full md:w-1/2 space-y-2">
                     <h2 className="font-medium">0{index}</h2>
@@ -68,7 +63,7 @@ export default function CardCarousel() {
                 </div>
 
                 {/* Right Stacked Image Section */}
-                <div className="relative w-full md:w-[500px] h-[500px] mt-10 md:mt-0 p-5">
+                <div className="relative w-full md:w-[500px] h-[500px] mt-10 md:mt-0 ">
                     <AnimatePresence mode="popLayout">
                         {items.map((card, i) => (
                             <motion.div
@@ -88,7 +83,7 @@ export default function CardCarousel() {
                             >
                                 <div className="w-full h-full">
                                     {/* Replace with <Image /> from next/image */}
-                                    <Image width={500} height={500} src={card.img} alt={card.title} className="w-full rounded-img  h-full object-cover" />
+                                    <CustomImage img={card.img} alt={card.title} className="w-full rounded-img  h-full object-cover" />
                                 </div>
                             </motion.div>
                         ))}

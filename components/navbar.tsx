@@ -1,6 +1,5 @@
 "use client";
 import { navLinks, siteDetails } from "@/constants";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -13,13 +12,13 @@ const Navbar = () => {
 
 
     return (
-        <nav className="flex font-sans max-[1100px]:px-12 fixed backdrop-blur-2xl rounded-card max-md:p-4 z-50 top-3 right-0 left-0 max-w-[1720px] w-full mx-auto items-center justify-between px-16 py-5">
+        <nav className="flex font-sans max-[1100px]:px-12 fixed backdrop-blur-2xl rounded-card max-md:p-4 z-50 top-3 max-md:top-0  right-0 left-0 max-w-[1720px] w-full mx-auto items-center justify-between px-16 py-5">
             <Link href={'/'} className="flex items-center justify-center gap-2  text-primary ">
                 <p className="font-bold">
                     {siteDetails.siteName}
                 </p>
             </Link>
-            <div className={`nav-links max-w-[950px] w-full max-[1140px]:max-w-[600px]  flex items-center justify-between ${btn ? 'max-lg:flex  rounded-card backdrop-blur-3xl absolute top-0 left-0 right-0 bottom-0 flex-col gap-5 h-screen items-center justify-center w-full max-lg:max-w-[768px] -z-10 bg-secondary-700' : 'max-lg:hidden'}`}>
+            <div className={`nav-links max-w-[950px] w-full max-[1140px]:max-w-[600px]  flex items-center justify-between ${btn ? 'max-lg:flex  rounded-card backdrop-blur-3xl absolute top-0 left-0 right-0 bottom-0 flex-col gap-5 h-screen items-center justify-center w-full max-lg:max-w-[768px] -z-10 bg-secondary-700 max-md:rounded-none' : 'max-lg:hidden'}`}>
                 <ul className="links  flex gap-[38px] items-center justify-between text-lg  max-lg:text-[15px]  max-lg:flex-col max-lg:gap-5 ">
                     {navLinks.map((link) => (
                         <li key={link.path}>
