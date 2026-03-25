@@ -6,6 +6,7 @@ import Insights from "@/components/insights"
 import Pricing from "@/components/pricing"
 import Recipes from "@/components/recipes"
 import Testimonials from "@/components/testimonials"
+import FAQ from "@/components/faq"
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
       </div>
       <Pricing />
       <Insights />
+      <FAQ />
     </>
   )
 }

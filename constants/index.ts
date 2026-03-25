@@ -172,3 +172,41 @@ export const InsightsData = [
     img: "/mini1.png"
   }
 ];
+
+export const faqData1 = [
+  {
+    question: "How does the AI create personalized meal plans?",
+    answer: "Our AI system analyzes your dietary preferences, health goals, and budget to curate meal plans that are unique to you. It continually learns from your feedback and choices to improve its suggestions over time.",
+  },
+  {
+    question: "How does the grocery delivery service work?",
+    answer: "Once your meal plan is set, we generate a smart shopping list. You can choose to have these items delivered from local partners directly to your door at a scheduled time.",
+  },
+  {
+    question: "Are there options for budget-conscious users?",
+    answer: "Absolutely. Our AI can prioritize seasonal ingredients and bulk-buy options to ensure your meal plan stays within your specified weekly budget.",
+  },
+  {
+    question: "How can I access nutrition education and healthy eating tips?",
+    answer: "You can find a dedicated 'Education' tab in the app, featuring articles, video tutorials, and daily tips curated by certified nutritionists.",
+  },
+];
+
+export const faqData2 = [
+  {
+    question: "How does the AI create personalized meal plans?",
+    answer: "Our AI system analyzes your dietary preferences, health goals, and budget to curate meal plans that are unique to you. It continually learns from your feedback and choices to improve its suggestions over time.",
+  },
+  {
+    question: "What types of diets does the AI support?",
+    answer: "Our AI supports a wide range of dietary preferences including vegan, vegetarian, keto, paleo, gluten-free, and more. You can also specify your health goals such as weight loss, muscle gain, or heart health.",
+  },
+  {
+    question: "Are there options for budget-conscious users?",
+    answer: "Yes, our AI can prioritize seasonal ingredients and bulk-buy options to ensure your meal plan stays within your specified weekly budget.",
+  },
+  {
+    question: "How can I access nutrition education and healthy eating tips?",
+    answer: "You can find a dedicated 'Education' tab in the app, featuring articles, video tutorials, and daily tips curated by certified nutritionists.",
+  },
+];
