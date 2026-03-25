@@ -4,7 +4,7 @@ import { ArrowRightIcon } from "lucide-react"
 
 const Insights = () => {
     return (
-        <div className="w-full bg-extra p-16 relative mt-16 max-md:px-5">
+        <div className="w-full bg-extra p-16 relative mt-16 max-md:px-5" id="insights">
             <div className="overlay w-[600px] h-[203px] max-md:w-[300px] max-md:h-[101px] rounded-r-img bg-extra absolute -top-[50px] -z-10 left-0" />
 
             <div className="flex items-center max-w-[1720px] my-16 mx-auto px-16 max-md:px-12  gap-7 text-center mt-10 max-lg:flex-col">

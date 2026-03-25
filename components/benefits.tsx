@@ -3,7 +3,7 @@ import CustomImage from "./customImage"
 
 const Benefits = () => {
     return (
-        <div className="w-full px-16 py-16 max-lg:px-5 ">
+        <div className="w-full px-16 py-16 max-lg:px-5 " id="benefits">
             <div className="flex items-center max-w-[1720px] my-16 mx-auto px-16 max-md:px-12  gap-7 text-center mt-10 max-lg:flex-col">
                 <h1 className="text-syne">Benefits</h1>
                 <span className="text-[50px] max-lg:hidden">{"/"}</span>

@@ -4,7 +4,7 @@ import { Quote } from 'lucide-react'
 
 const Testimonials = () => {
     return (
-        <div className="w-full  p-16  ">
+        <div className="w-full  p-16  " id="testimonials">
             <div className="w-full h-screen absolute left-0 bottom-50 -z-1  blur-[200px] bg-gradient-to-br from-extra to-secondary mb-10"/>
             <div className="flex items-center max-w-[1720px] my-16 mx-auto px-16 max-md:px-12  gap-7 text-center mt-10 max-lg:flex-col">
                 <h1 className="text-syne">Testimonials</h1>

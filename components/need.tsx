@@ -4,7 +4,7 @@ import CustomImage from "./customImage"
 
 const Need = () => {
     return (
-        <div className="py-16">
+        <div className="py-16" id="need">
             <div className="max-w-[1720px] mx-auto px-16 max-[1100px]:px-12 py-15">
                 <div className="flex items-center  gap-7  text-center mt-10 max-lg:flex-col">
                     <h1 className="text-syne text-5xl">Need Assistance?</h1>

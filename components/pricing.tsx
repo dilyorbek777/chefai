@@ -4,7 +4,7 @@ import CustomImage from "./customImage"
 const Pricing = () => {
     return (
 
-        <div className="w-full  p-16 max-md:px-5  ">
+        <div className="w-full  p-16 max-md:px-5  " id="pricing">
             <div className="flex items-center max-w-[1720px] my-16 mx-auto px-16 max-md:px-12  gap-7 text-center mt-10 max-lg:flex-col">
                 <h1 className="text-syne">Pricing</h1>
                 <span className="text-[50px] max-lg:hidden">{"/"}</span>
