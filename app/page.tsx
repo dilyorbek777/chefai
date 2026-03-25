@@ -7,6 +7,7 @@ import Pricing from "@/components/pricing"
 import Recipes from "@/components/recipes"
 import Testimonials from "@/components/testimonials"
 import FAQ from "@/components/faq"
+import Need from "@/components/need"
 
 const Home = () => {
   return (
@@ -25,6 +26,7 @@ const Home = () => {
       <Pricing />
       <Insights />
       <FAQ />
+      <Need />
     </>
   )
 }
